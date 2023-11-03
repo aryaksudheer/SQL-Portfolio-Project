@@ -13,8 +13,7 @@ Where [State/UnionTerritory] not like '%unassigned%' and [State/UnionTerritory] 
 Group by [State/UnionTerritory] 
 order by TotalDeaths
 
-
-
+--Joining Two Tables
 Select [State/UnionTerritory], 
 MAX(Confirmed) as TotalCasesReported,   MAx(Cured) as TotalCured, MAX(Deaths) as TotalDeaths, 
 Max([Total Doses Administered]) as TotalDosesAdministrated,MAX([Total Individuals Vaccinated]) as TotalIndividualsVaccinated
@@ -26,7 +25,7 @@ Where [State/UnionTerritory] not like '%unassigned%' and [State/UnionTerritory] 
 Group by [State/UnionTerritory] 
 order by TotalDeaths
 
-
+--Checking 
 Select * From PortfolioProjects..covid_19_india
 
 Select * From PortfolioProjects..covid_vaccine_statewise
@@ -54,4 +53,5 @@ Where [State/UnionTerritory] not like '%unassigned%' and [State/UnionTerritory] 
 Group by [State/UnionTerritory] 
 --order by TotalDeaths
 
+--New Table TotalCasesAndVaccinated
 Select * From TotalCasesAndVaccinated
